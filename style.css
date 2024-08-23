@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body{
+    background: #19172e;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before{
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background-image: linear-gradient(#f9d924 , #ff2c24);
+    animation: animate 5s ease-in-out infinite
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background-image: linear-gradient(#01d6ff , #0f24f9);
+    animation:  animate 5s ease-in-out infinite;
+    animation-delay:-2.5s ;
+}
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+.clock{
+    position: relative;
+    width: 700px;
+    height: 250px;
+    background: rgba(255,255,255,0.05);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+}
+
+.clock .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.clock .container h2{
+    font-size: 2em;
+    color: #fff;
+}
+.am-pm{
+    color: #ffff;
+    font-size: 18px;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+ul li{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+}
+
+
+li:hover{
+    background-image: linear-gradient( #dcd3fe, #0a93ce);
+}
+footer p{
+    color: #fff;
+}
+footer span{
+    background-image: linear-gradient(#01d6ff , #0f24f9);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
